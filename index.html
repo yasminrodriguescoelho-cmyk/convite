@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#9f2534">
+
+  <title>Um convite especial 🍓</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <main>
+    <!-- TELA DO ENVELOPE -->
+    <section
+      class="envelope-screen"
+      id="envelopeScreen"
+      aria-label="Envelope do convite"
+    >
+      <div class="little-label">VOCÊ ESTÁ CONVIDADA</div>
+
+      <div class="envelope-wrap">
+        <div class="envelope-shadow"></div>
+
+        <button
+          class="envelope"
+          id="openEnvelope"
+          type="button"
+          aria-label="Abrir convite"
+        >
+          <span class="envelope-back"></span>
+          <span class="envelope-paper"></span>
+          <span class="envelope-left"></span>
+          <span class="envelope-right"></span>
+          <span class="envelope-bottom"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal">🍓</span>
+        </button>
+      </div>
+
+      <h1>Tenho um convite<br><em>para você!</em></h1>
+
+      <p class="tap-hint">Toque no envelope para abrir</p>
+
+      <div class="bottom-berries" aria-hidden="true">
+        🍓 ✿ 🍓
+      </div>
+    </section>
+
+    <!-- CONVITE PRINCIPAL -->
+    <section
+      class="invite-screen hidden"
+      id="inviteScreen"
+      aria-label="Convite de aniversário"
+    >
+      <div class="paper-frame">
+        <div class="paper-topline">♡</div>
+
+        <div class="invite-art">
+          <img
+            id="inviteImage"
+            src="convite.png"
+            alt="Convite de aniversário com tema vintage de moranguinhos"
+          >
+        </div>
+
+        <p class="personal-note">
+          Prepare-se para um dia cheio de carinho e diversão! 🍓
+        </p>
+
+        <div class="buttons">
+          <a
+            class="action-button confirm"
+            id="rsvpButton"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span aria-hidden="true">💌</span>
+            Confirmar presença
+          </a>
+
+          <a
+            class="action-button location"
+            id="locationButton"
+            href="https://maps.app.goo.gl/qY4bQ7VW1KUAoPoG7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span aria-hidden="true">📍</span>
+            Ver localização
+          </a>
+
+          <button
+            class="action-button gifts"
+            id="giftsButton"
+            type="button"
+          >
+            <span aria-hidden="true">🎁</span>
+            Sugestões de presentes
+          </button>
+        </div>
+
+        <p class="footer-note">Feito com carinho ✿</p>
+      </div>
+
+      <!-- BOTÃO DE INFORMAÇÕES -->
+      <button
+        id="infoButton"
+        class="info-button"
+        type="button"
+      >
+        🍓 INFORMAÇÕES IMPORTANTES
+      </button>
+
+      <!-- JANELA DE INFORMAÇÕES: COMEÇA ESCONDIDA -->
+      <div
+        id="infoModal"
+        class="info-modal hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="infoTitle"
+      >
+        <div class="info-content">
+          <button
+            id="closeInfo"
+            class="close-info"
+            type="button"
+            aria-label="Fechar informações"
+          >
+            ×
+          </button>
+
+          <h2 id="infoTitle">🍓 Informações importantes 💗</h2>
+
+          <h3>🍰 Pratinho de comida</h3>
+
+          <p>
+            Cada convidado deverá levar um prato de comida
+            para compartilharmos esse momento especial! 💕
+          </p>
+
+          <h3>🎀 Entre no clima da festa</h3>
+
+          <p>
+            Quem quiser pode vir caracterizado com as cores
+            de qualquer personagem da Moranguinho, menos
+            a própria Moranguinho! 🍓💗
+          </p>
+
+          <p class="nota-festa">
+            🍓 Lembrando que será uma festinha simples,
+            preparada com muito carinho! O que realmente
+            importa é a presença de vocês para deixar esse
+            dia ainda mais especial. 💗✨
+          </p>
+
+          <button
+            class="close-bottom"
+            id="closeInfoBottom"
+            type="button"
+          >
+            Fechar com carinho ♡
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- JANELA DE SUGESTÕES DE PRESENTES -->
+  <div
+    class="modal hidden"
+    id="giftsModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="giftsTitle"
+  >
+    <div class="modal-card">
+      <button
+        class="modal-close"
+        id="closeGifts"
+        type="button"
+        aria-label="Fechar sugestões de presentes"
+      >
+        ×
+      </button>
+
+      <div class="modal-berry">🍓</div>
+
+      <p class="eyebrow">UMA LISTINHA COM CARINHO</p>
+
+      <h2 id="giftsTitle">Sugestões de presentes</h2>
+
+      <p class="modal-intro">
+        🎁 Vou amar qualquer presente e receber tudo com muito
+        carinho! Mas, se estiver em dúvida sobre o que me dar,
+        aqui vão algumas ideias. ✨
+      </p>
+
+      <ul id="giftList">
+        <li>✨ Perfume ou cremes</li>
+        <li>🎀 Maquiagens</li>
+        <li>💗 Livros</li>
+        <li>🥳 Acessórios para cabelo</li>
+        <li>🌸 Roupas</li>
+        <li>🍓 Colares e pulseiras</li>
+        <li>👑 Itens de papelaria</li>
+      </ul>
+
+      <p class="duvida-presente">
+        💌 Ficou com alguma dúvida sobre os presentes?
+        Pode perguntar para mim ou para minha mãe! 💗
+      </p>
+
+      <button
+        class="close-bottom"
+        id="closeGiftsBottom"
+        type="button"
+      >
+        Fechar com carinho ♡
+      </button>
+    </div>
+  </div>
+</body>
+</html>

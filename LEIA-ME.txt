@@ -1,0 +1,30 @@
+# Convite interativo 🍓
+
+Este é um modelo gratuito de convite interativo para abrir no notebook.
+
+## Como testar
+1. Extraia o arquivo ZIP para uma pasta.
+2. Abra a pasta `convite_interativo_moranguinho`.
+3. Dê dois cliques em `index.html`. Ele abrirá no navegador.
+4. Clique no envelope para revelar o convite e teste os botões.
+
+## Como personalizar os dados
+Abra `script.js` no Bloco de Notas ou no VS Code:
+- `WHATSAPP_NUMBER`: troque pelo número que vai receber as confirmações, incluindo 55 + DDD + número, sem espaços.
+- `LOCAL_DA_FESTA`: troque pelo endereço completo da festa.
+
+Exemplo de número: `5541991234567` (é apenas um exemplo de formato).
+
+## Como trocar a arte pelo convite que você fez no Canva
+1. No Canva, baixe seu convite como PNG.
+2. Coloque a imagem dentro desta mesma pasta.
+3. Abra `index.html` e localize `src="convite.svg"`.
+4. Troque por `src="meu-convite.png"` (use exatamente o nome do arquivo que você colocou na pasta).
+
+Se você mantiver `convite.svg`, pode editar o modelo inicial no VS Code, mas trocar pela imagem do Canva é mais simples.
+
+## Sugestões de presentes
+No `index.html`, procure a lista com `id="giftList"` e edite os itens que quiser.
+
+## Publicar gratuitamente
+Para enviar um link para outras pessoas, o site precisa ser publicado. Uma opção gratuita é o GitHub Pages. Os arquivos não ficam públicos enquanto você só abre o `index.html` no seu notebook. Posso orientar a publicação depois que você personalizar os dados.
